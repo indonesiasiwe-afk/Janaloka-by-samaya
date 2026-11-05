@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Snack - Pesan Sekarang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4A2C2A;
+            --secondary: #D4A373;
+            --bg: #FAEDCD;
+            --text: #2B2B2B;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .card-price {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-wa {
+            display: block;
+            text-align: center;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-wa:hover {
+            background-color: #1DA851;
+        }
+
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kedai Manis & Gurih</h1>
+        <p>Langsung pesan, dibungkus rapi, siap disantap.</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <!-- Produk 1: Pempek -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1626804475297-41609ea087a2?q=80&w=800&auto=format&fit=crop" alt="Pempek" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Pempek Porsi</h2>
+                    <div class="card-price">Rp 25.000 / Porsi</div>
+                    <p class="card-desc">Pempek lenjer & kapal selam gurih, disajikan dengan kuah cuko kental pedas manis.</p>
+                    <a href="https://wa.me/6281222075553?text=Halo%20Kak%2C%20saya%20mau%20pesan%20Pempek%20Porsi%20(Rp%2025.000).%20Apakah%20ready%3F" target="_blank" class="btn-wa">Pesan Pempek</a>
+                </div>
+            </div>
+
+            <!-- Produk 2: Brownies -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop" alt="Brownies" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Fudgy Brownies</h2>
+                    <div class="card-price">Rp 120.000 / Dus</div>
+                    <p class="card-desc">Brownies cokelat pekat, tekstur fudgy dan moist, topping cokelat lumer di atasnya.</p>
+                    <a href="https://wa.me/6281222075553?text=Halo%20Kak%2C%20saya%20mau%20pesan%20Brownies%20Fudgy%20(Rp%20120.000%2Fdus).%20Apakah%20ready%3F" target="_blank" class="btn-wa">Pesan Brownies</a>
+                </div>
+            </div>
+
+            <!-- Produk 3: Soft Cookies -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=800&auto=format&fit=crop" alt="Pempek" class="card-img"> alt="Soft Cookies" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Soft Cookies</h2>
+                    <div class="card-price">Rp 15.000 / Pcs</div>
+                    <p class="card-desc">Cookies lembut dengan isian choco chips melimpah, manisnya pas buat teman ngeteh.</p>
+                    <a href="https://wa.me/6281222075553?text=Halo%20Kak%2C%20saya%20mau%20pesan%20Soft%20Cookies%20(Rp%2015.000%2Fpcs).%20Mau%20pesan%20berapa%20pcs%20ya%3F" target="_blank" class="btn-wa">Pesan Cookies</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tombol WA Melayang -->
+    <a href="https://wa.me/6281222075553?text=Halo%20Kak%2C%20saya%20mau%20tanya-tanya%20menu%20yang%20tersedia%20hari%20ini." target="_blank" class="floating-wa">
+        💬
+    </a>
+
+    <footer>
+        <p>&copy; 2024 Kedai Manis & Gurih. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
